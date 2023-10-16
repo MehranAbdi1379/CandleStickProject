@@ -23,10 +23,10 @@ namespace CandleStick.API.Controllers
         public async Task<CandleStickModel> Get(Guid id) => await service.Get(id);
 
         [HttpPost]
-        public async void Post([FromBody] CandleStickModelCreateDTO dto) => service.Add(dto);
+        public async void Post([FromBody] CandleStickModelDTO dto) => service.Add(dto);
 
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody] CandleStickModelUpdateDTO dto) => service.Update(id, dto);
+        public void Put(Guid id, [FromBody] CandleStickModelDTO dto) => service.Update(id, dto);
 
         [HttpDelete("{id}")]
         public void Delete(Guid id) => service.Delete(id);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CandleStick.Service.DTO
 {
-    public class CandleStickModelCreateDTO
+    public class CandleStickModelDTO
     {
         public decimal OpenPrice { get; set; }
         public decimal ClosePrice { get; set; }

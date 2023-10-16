@@ -9,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace CandleStick.Service.CQRS.CandleStick.Commands
 {
-    public record CandleStickModelUpdateCommand(Guid id,CandleStickModelUpdateDTO dto): IRequest<CandleStickModel>;
+    public record CandleStickModelUpdateCommand(Guid id,CandleStickModelDTO dto): IRequest<CandleStickModel>;
 }

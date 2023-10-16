@@ -13,6 +13,7 @@ builder.AddMediatR();
 builder.Services.AddHostedServices();
 builder.Logging.AddSerilog();
 builder.Services.ConfigureSeriLog();
+builder.AddCors();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -26,6 +27,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 

@@ -22,8 +22,8 @@ namespace CandleStick.Service
             this.mediator = mediator;
         }
 
-        public void Add(CandleStickModelCreateDTO dto) => mediator.Send(new CandleStickModelCreateCommand(dto));
-        public void Update(Guid id,CandleStickModelUpdateDTO dto) => mediator.Send(new CandleStickModelUpdateCommand(id,dto));
+        public void Add(CandleStickModelDTO dto) => mediator.Send(new CandleStickModelCreateCommand(dto));
+        public void Update(Guid id,CandleStickModelDTO dto) => mediator.Send(new CandleStickModelUpdateCommand(id,dto));
         public void Delete(Guid id) => mediator.Send(new CandleStickModelDeleteCommand(id));
         public Task<List<CandleStickModel>> GetAll() => mediator.Send(new CandleStickModelGetAllQuery());
         public Task<CandleStickModel> Get(Guid id) => mediator.Send(new CandleStickModelGetByIdQuery(id));
